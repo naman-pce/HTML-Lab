@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 6 - CSS Box Model and Positioning</title>
+
+    <style>
+        /* General styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        /* Fixed positioning */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        /* Main content */
+        main {
+            margin-top: 100px;
+            padding: 20px;
+        }
+
+        /* CSS Box Model */
+        .box {
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 4px solid royalblue;
+            outline: 2px dashed orange;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        /* Relative positioning */
+        .relative-box {
+            position: relative;
+            left: 20px;
+            background-color: lightgreen;
+            padding: 15px;
+            margin: 20px 0;
+            border: 2px solid green;
+        }
+
+        /* Absolute positioning */
+        .parent {
+            position: relative;
+            height: 150px;
+            background-color: #ddd;
+            border: 2px solid gray;
+            margin: 25px 0;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: coral;
+            color: white;
+            padding: 15px;
+            border: 2px solid darkred;
+        }
+
+        /* Sticky positioning */
+        .sticky-box {
+            position: sticky;
+            top: 75px;
+            background-color: gold;
+            padding: 12px;
+            border: 2px solid goldenrod;
+            text-align: center;
+            font-weight: bold;
+            z-index: 500;
+        }
+
+        /* Static positioning */
+        .static-box {
+            position: static;
+            background-color: lavender;
+            padding: 15px;
+            border: 2px solid purple;
+            margin: 15px 0;
+        }
+
+        /* Demonstrate box-sizing */
+        .box-sizing-demo {
+            width: 300px;
+            padding: 20px;
+            border: 5px solid darkblue;
+            background-color: lightcyan;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Box Model and Positioning</h1>
+    </header>
+
+    <main>
+        <h2>1. CSS Box Model</h2>
+
+        <p>
+            The CSS Box Model consists of content, padding,
+            border and margin. Outline is drawn outside the border.
+        </p>
+
+        <div class="box">
+            <h3>Box Model</h3>
+            <p>Content Area</p>
+            <p>Margin, Padding, Border and Outline</p>
+        </div>
+
+        <h2>2. Static Positioning</h2>
+
+        <div class="static-box">
+            This element uses static positioning.
+        </div>
+
+        <h2>3. Relative Positioning</h2>
+
+        <div class="relative-box">
+            This element is moved 20px to the right
+            from its normal position.
+        </div>
+
+        <h2>4. Absolute Positioning</h2>
+
+        <div class="parent">
+            <p>This is the positioned parent container.</p>
+
+            <div class="absolute-box">
+                Absolute Box
+            </div>
+        </div>
+
+        <h2>5. Sticky Positioning</h2>
+
+        <p>Scroll down the page to observe the sticky element.</p>
+
+        <div class="sticky-box">
+            I am a Sticky Element
+        </div>
+
+        <p>
+            CSS sticky positioning keeps an element in its normal
+            flow until the specified scroll position is reached.
+        </p>
+
+        <p>
+            Scroll further to see how the sticky element behaves.
+            The header at the top uses fixed positioning.
+        </p>
+
+        <h2>6. Box Sizing</h2>
+
+        <div class="box-sizing-demo">
+            Width: 300px, including padding and border
+            because box-sizing is border-box.
+        </div>
+
+        <h2>7. CSS Properties Used</h2>
+
+        <ul>
+            <li>Margin: Space outside the border</li>
+            <li>Padding: Space inside the border</li>
+            <li>Border: Surrounds the content and padding</li>
+            <li>Outline: Drawn outside the border</li>
+            <li>Position: Controls element placement</li>
+            <li>Box-sizing: Controls width and height calculation</li>
+        </ul>
+
+    </main>
+
+    <footer>
+        <p>End of Experiment 6</p>
+    </footer>
+
+</body>
+</html>
