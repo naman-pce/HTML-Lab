@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experiment 7 - CSS Flexbox Layout</title>
+
+    <style>
+        /* General styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Navigation bar using Flexbox */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #333;
+            padding: 15px 30px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+        }
+
+        .nav-links a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* Main heading */
+        h1 {
+            text-align: center;
+            color: #333;
+            margin: 30px 10px;
+        }
+
+        .description {
+            text-align: center;
+            margin: 15px;
+            line-height: 1.6;
+        }
+
+        /* Flexbox container */
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Flex items */
+        .box {
+            flex: 1 1 220px;
+            max-width: 300px;
+            padding: 25px;
+            background-color: white;
+            border: 2px solid #333;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .box h2 {
+            color: #333;
+        }
+
+        /* Demonstrating order property */
+        .box1 {
+            order: 2;
+            border-top: 5px solid #e74c3c;
+        }
+
+        .box2 {
+            order: 1;
+            border-top: 5px solid #3498db;
+        }
+
+        .box3 {
+            order: 3;
+            border-top: 5px solid #2ecc71;
+        }
+
+        /* Second Flexbox example */
+        .alignment-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            gap: 15px;
+            min-height: 180px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #e0e0e0;
+            border: 2px dashed #777;
+        }
+
+        .alignment-item {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        /* Responsive layout for mobile screens */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .nav-links {
+                justify-content: center;
+            }
+
+            .nav-links a {
+                padding: 10px;
+            }
+
+            .flex-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .box1 {
+                order: 1;
+            }
+
+            .box2 {
+                order: 2;
+            }
+
+            .box3 {
+                order: 3;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <nav>
+        <div class="logo">My Website</div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main id="home">
+
+        <h1>Responsive Webpage Using CSS Flexbox</h1>
+
+        <p class="description">
+            This webpage demonstrates CSS Flexbox properties,
+            including direction, wrapping, alignment and ordering.
+            Resize the browser window to see the responsive layout.
+        </p>
+
+        <!-- Flexbox cards -->
+        <section class="flex-container">
+
+            <div class="box box1">
+                <h2>Box 1</h2>
+                <p>This is the first flex item.</p>
+                <p>Order: 2</p>
+            </div>
+
+            <div class="box box2">
+                <h2>Box 2</h2>
+                <p>This is the second flex item.</p>
+                <p>Order: 1</p>
+            </div>
+
+            <div class="box box3">
+                <h2>Box 3</h2>
+                <p>This is the third flex item.</p>
+                <p>Order: 3</p>
+            </div>
+
+        </section>
+
+        <!-- Alignment demonstration -->
+        <h1>Flexbox Alignment Demo</h1>
+
+        <section class="alignment-container">
+
+            <div class="alignment-item">Item A</div>
+            <div class="alignment-item">Item B</div>
+            <div class="alignment-item">Item C</div>
+
+        </section>
+
+        <!-- Explanation -->
+        <section style="padding: 20px;">
+            <h2>CSS Flexbox Properties</h2>
+
+            <ul>
+                <li><b>display: flex;</b> Creates a flex container.</li>
+                <li><b>flex-direction:</b> Sets the direction of items.</li>
+                <li><b>flex-wrap:</b> Allows items to move to another line.</li>
+                <li><b>justify-content:</b> Aligns items along the main axis.</li>
+                <li><b>align-items:</b> Aligns items along the cross axis.</li>
+                <li><b>order:</b> Changes the visual order of items.</li>
+                <li><b>gap:</b> Adds space between flex items.</li>
+                <li><b>Media query:</b> Adjusts the layout for smaller screens.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <p>End of Experiment 7</p>
+    </footer>
+
+</body>
+</html>
