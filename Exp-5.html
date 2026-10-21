@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experiment 5 - CSS Types</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="exp-5.css">
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        h1 {
+            color: darkslateblue;
+            text-align: center;
+        }
+
+        .description {
+            color: darkgreen;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        #special {
+            background-color: lightyellow;
+            padding: 10px;
+            border-left: 4px solid orange;
+        }
+
+        input:focus {
+            background-color: lightyellow;
+            outline: 2px solid royalblue;
+        }
+
+        ul li:nth-child(2) {
+            color: crimson;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Experiment 5: Types of CSS</h1>
+
+    <!-- Inline CSS -->
+    <p style="color: blue; font-size: 20px; text-align: center;">
+        This paragraph uses Inline CSS.
+    </p>
+
+    <!-- Internal CSS: class selector -->
+    <p class="description">
+        This paragraph uses Internal CSS with a class selector.
+    </p>
+
+    <!-- Internal CSS: ID selector -->
+    <p id="special">
+        This paragraph uses Internal CSS with an ID selector.
+    </p>
+
+    <!-- External CSS: element and class selectors -->
+    <h2 class="heading">External CSS Demonstration</h2>
+
+    <p class="external-text">
+        This paragraph is styled using an external CSS file.
+    </p>
+
+    <!-- Attribute selector -->
+    <input type="text" placeholder="Enter your name">
+
+    <br><br>
+
+    <!-- Pseudo-class: nth-child -->
+    <h3>CSS Selectors List</h3>
+
+    <ul>
+        <li>Element Selector</li>
+        <li>Class Selector</li>
+        <li>ID Selector</li>
+        <li>Attribute Selector</li>
+    </ul>
+
+    <!-- Pseudo-class: hover -->
+    <button class="my-button">Hover Over Me</button>
+
+    <footer>
+        <p>End of Experiment 5</p>
+    </footer>
+
+</body>
+</html>
+
+External CSS
+
+/* External CSS */
+
+/* Element selector */
+h2 {
+    color: darkorange;
+    text-align: center;
+}
+
+/* Class selector */
+.heading {
+    font-size: 26px;
+    text-decoration: underline;
+}
+
+.external-text {
+    color: darkslategray;
+    font-size: 18px;
+    background-color: white;
+    padding: 12px;
+    border: 1px solid lightgray;
+}
+
+/* Attribute selector */
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+/* Pseudo-class: hover */
+.my-button {
+    background-color: royalblue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.my-button:hover {
+    background-color: darkblue;
+}
+
+/* Pseudo-element */
+footer p::first-letter {
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
