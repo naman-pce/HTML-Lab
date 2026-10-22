@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        section {
+            background-color: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        img, video, iframe {
+            max-width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Welcome to My Webpage</h1>
+
+    <section>
+        <h2>Audio Example</h2>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <section>
+        <h2>Video Example</h2>
+        <video controls width="400">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </section>
+
+    <section>
+        <h2>Embedded Content</h2>
+        <iframe
+            src="https://www.example.com"
+            width="500"
+            height="250"
+            title="Embedded webpage">
+        </iframe>
+    </section>
+
+    <section>
+        <h2>Product Table</h2>
+
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Availability</th>
+            </tr>
+
+            <tr>
+                <td>Laptop</td>
+                <td>₹50,000</td>
+                <td>Available</td>
+            </tr>
+
+            <tr>
+                <td>Mobile</td>
+                <td>₹20,000</td>
+                <td>Available</td>
+            </tr>
+
+            <tr>
+                <td>Headphones</td>
+                <td>₹2,000</td>
+                <td>Out of Stock</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>About Us</h2>
+        <p>
+            This is a responsive webpage created using HTML5
+            and CSS. It adjusts its layout according to the
+            screen size of the device.
+        </p>
+    </section>
+
+</body>
+</html>
